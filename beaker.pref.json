@@ -1,7 +1,7 @@
 {
 "languages" : {
     "R" : {
-      "path" : "/Users/jdotson/anaconda/bin"
+      "path" : "/Library/Frameworks/R.framework/Resources"
     },
     "Python3" : {
       "path" : "/Users/jdotson/anaconda/bin"
