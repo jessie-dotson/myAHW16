@@ -1,0 +1,37 @@
+---
+title: "Calling Python from R"
+author: "J. Dotson"
+date: "September 2, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+myecho = TRUE
+
+#ideally i'd like for the path to be changed when R starts, up, but this 
+# work too..
+Sys.setenv(PATH = paste("/Users/jdotson/anaconda/bin", Sys.getenv("PATH"), sep=":"))
+```
+
+## A super simple demo of calling python from R
+
+First run some R code
+
+```{r myR, echo = myecho}
+print("Hello from R!")
+```
+
+## and now run some python
+
+it's necessary to have praw installed in your python (pip install praw)
+and then use the rPython package
+
+```{r myPython, echo=myecho}
+require(rPython)
+python.load("hello.py")
+jj<-python.get("trivial")
+print(jj)
+```
+
+
